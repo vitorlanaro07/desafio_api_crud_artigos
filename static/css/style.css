@@ -1,0 +1,113 @@
+body{
+    background-color: rgb(74, 72, 72);
+    color: #FFF;
+    font-size: 16px;
+}
+
+.header__api{
+    display: flex;
+    background-color: #000;
+    color: #FFF;
+    align-items: center;
+    margin: 0 0 40px;
+    justify-content: space-evenly;
+}
+
+.header__titulo{
+    font-size: 2em;
+    margin: 20px 15px;
+}
+
+.header__lista{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.lista__link--archor{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1.2em;
+}
+
+.lista__link--archor:hover{
+    text-decoration: underline;
+    color: #CCC;
+}
+
+
+.container{
+    width: 80%;
+    border:1px solid #FFF;
+    border-radius: 10px;
+    margin: 15px auto;
+}
+
+.container--flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.container__titulo{
+    font-size: 2em;
+    text-align: center;
+    margin: 25px auto;
+}
+
+.container__formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.3em;
+}
+
+.formulario__titulo{
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.formulario__campo{
+    width: 60%;
+    font-size: 1.1em;
+}
+
+.formulario__btn{
+    font-size: 1.3em;
+    border-radius: 7px;
+    border: none;
+    margin: 0 0 15px;
+}
+
+.formulario__btn:hover{
+    background-color: tomato;
+}
+
+.titulo__table{
+    text-align: center;
+    margin: 15px 0;
+    font-size: 2em;
+}
+
+.container__table{
+    margin: 15px auto;
+}
+
+.container__table, .thead__coluna, .tbody__coluna{
+    border:1px solid #FFF;
+}
+
+.thead__linha{
+    text-align: center;
+}
+
+.thead__coluna, .tbody__coluna{
+    padding: 10px;
+}
+
+.container--explicacao{
+    margin: 25px auto;
+    border: none;
+}
+.explicacao{
+    font-size: 1.5em;
+}

@@ -1,0 +1,16 @@
+
+{%extends "base.html"%}
+{%block conteudo%}
+    <div class="container container--explicacao">
+        <p class="explicacao">Para que funcione corretamente, você precisa informar o mainpage do seu blog favorito, assim carregará todos os Newsletter para voce.</p>
+    </div>
+    <div class="container">
+        <h1 class="container__titulo">Extrair Artigos</h1>
+        <form action="/extrair_links" method="post" class="container__formulario">
+            <label for="extrair_url" class="formulario__titulo">Informe o link do blog</label>
+            <input type="url" name="extrair_url" class="formulario__campo">
+            <button class="formulario__btn">Salvar</button>
+        </form>
+    </div>
+
+{%endblock%}
