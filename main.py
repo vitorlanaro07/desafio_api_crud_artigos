@@ -54,7 +54,7 @@ def extrair_dados(html, url):
     soup = BeautifulSoup(html, 'html.parser')
     soup.select('h1,h2')
     for item in soup.find_all('div', 'item-details'):
-        link = url + item.a['href']
+        link = item.a['href']
         titulo = item.a.text
         lista.append(Artigo(titulo, link))
 
