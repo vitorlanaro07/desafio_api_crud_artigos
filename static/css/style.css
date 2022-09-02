@@ -9,7 +9,6 @@ body{
     background-color: #000;
     color: #FFF;
     align-items: center;
-    margin: 0 0 40px;
     justify-content: space-evenly;
 }
 
@@ -35,6 +34,32 @@ body{
     color: #CCC;
 }
 
+.message{
+    background: white;
+    opacity: 0.7;
+    height: 50px;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.5em;
+    box-shadow: 1px 4px 10px -4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0 22%;
+}
+
+.message__texto{
+    color: #000;
+}
+
+.message-off{
+    opacity: 0;
+    display: none;
+}
+
+.message__spam{
+    color: #000;
+}
 
 .container{
     width: 80%;

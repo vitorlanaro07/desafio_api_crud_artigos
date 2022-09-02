@@ -2,13 +2,15 @@
 {%extends "base.html"%}
 {%block conteudo%}
     <div class="container container--explicacao">
-        <p class="explicacao">Para que funcione corretamente, você precisa informar o mainpage do seu blog favorito, assim carregará todos os Newsletter para voce.</p>
+        <p class="explicacao">Para que funcione corretamente, você precisa informar o mainpage do seu blog favorito, assim carregará todos os Newsletter para voce.
+        </p>
+        <p class="explicacao">Por ser uma aplicação que usa de web-scraping, isso implica em extração de determinados dados de um documento HTML, pensando nisso e nas classes CSS que cada site tem, essa aplicação importará corretamente todos os artigos dos sites: "https://tiinside.com.br/newsletter/" "https://devgo.com.br"</p>
     </div>
     <div class="container">
         <h1 class="container__titulo">Extrair Artigos</h1>
         <form action="/extrair_links" method="post" class="container__formulario">
-            <label for="extrair_url" class="formulario__titulo">Informe o link do blog</label>
-            <input type="url" name="extrair_url" class="formulario__campo">
+            <label for="extrair_link" class="formulario__titulo">Informe o link do blog</label>
+            <input type="link" name="extrair_link" class="formulario__campo">
             <button class="formulario__btn">Salvar</button>
         </form>
     </div>

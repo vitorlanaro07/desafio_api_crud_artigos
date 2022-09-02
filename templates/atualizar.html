@@ -1,0 +1,13 @@
+{%extends "base.html"%}
+{%block conteudo%}
+  <div class="container container--flex">
+      <h1 class="container__titulo">Atualizar Artigo</h1>
+      <form action="/atualizar_dados/{{artigo.id_artigo}}" method="post" class="container__formulario">
+        <label for="titulo" class="formulario__titulo" >Titulo atual</label>
+          <input type="text" name="titulo" class="formulario__campo" value="{{artigo.titulo}}">
+          <label for="link" class="formulario__titulo">Link atual</label>
+          <input type="url" name="link" class="formulario__campo" value="{{artigo.link}}">
+          <button class="formulario__btn" type="submit" onclick="window.location.href = '/atualizar/{{artigo.id_artigo}}'">Salvar</button>
+      </form>
+  </div>
+{%endblock%}

@@ -7,6 +7,7 @@
     <title>API</title>
     <link rel="stylesheet" href="{{url_for('static', filename='css/reset.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <script src="https://kit.fontawesome.com/4f5308f8c5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="header__api">
@@ -16,8 +17,21 @@
             <li class="lista__link"><a href="{{url_for('importar')}}" class="lista__link--archor">Importar</a></li>
         </ul>
     </header>
+
+    <div class="message message-off">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="message__texto">{{message}}</p>
+                    <spam class="message__spam"><i class="fa-solid fa-x"></i></spam>
+                {%endfor%}
+            {% endif %}
+        {% endwith %}
+    </div>    
+
     {%block conteudo%}
 
-    {%endblock%} 
+    {%endblock%}
+    <script src="{{url_for('static', filename='js/index.js')}}"></script>
 </body>
 </html>

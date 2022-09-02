@@ -4,8 +4,8 @@
     <div class="container container--flex">
         <h1 class="container__titulo">Adicionar Artigo</h1>
         <form action="/adicionar" method="post" class="container__formulario">
-            <label for="url" class="formulario__titulo">Informe o Link</label>
-            <input type="url" name="url" class="formulario__campo">
+            <label for="link" class="formulario__titulo">Informe o Link</label>
+            <input type="url" name="link" class="formulario__campo">
             <label for="titulo" class="formulario__titulo">Informe o titulo do artigo</label>
             <input type="text" name="titulo" class="formulario__campo">
             <button class="formulario__btn">Salvar</button>
@@ -16,6 +16,7 @@
         <table class="container__table">
             <th class="table__thead">
                 <tr class="thead__linha">
+                    <td class="thead__coluna">ID</td>
                     <td class="thead__coluna">Artigo</td>
                     <td class="thead__coluna">Link</td>
                     <td class="thead__coluna" colspan="2">Opções</td>
@@ -24,18 +25,19 @@
             <tbody class="table__tbody">
                 {%for item in lista_de_artigos%}
                 <tr class="tbody__linha">
+                    <td class="tbody__coluna">{{item.id_artigo}}</td>
                     <td class="tbody__coluna">{{item.titulo}}</td>
-                    <td class="tbody__coluna"><a href="{{item.url}}" class="link">Link</a></td>
+                    <td class="tbody__coluna"><a href="{{item.link}}" class="link">Link</a></td>
                     <td class="tbody__coluna">
-                        <button class="table__btn">Apagar</button>
+                        <button type="submit" class="table__btn--apagar" onclick="window.location.href = '/delete/{{item.id_artigo}}'">Apagar</button>
                     </td>
                     <td class="tbody__coluna">
-                        <button class="table__btn">Atualizar</button>
+                        <button class="table__btn" onclick="window.location.href = '/atualizar/{{item.id_artigo}}'">Atualizar</button>
                     </td>
                 </tr>
                 {%endfor%}
             </tbody>
         </table>
     {%endif%}
-
+    <script src="{{url_for('static', filename='js/index.js')}}"></script>
 {%endblock%}
